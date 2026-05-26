@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-green: #AAFF00;
+  --color-black: #0A0A0A;
+  --color-dark: #111111;
+  --color-light: #F5F5F5;
+  --color-gray: #888888;
+  --color-border: #E5E5E5;
+  --color-muted-bg: #F0F0F0;
+  
+  --font-display: "Arial Black", sans-serif;
+  --font-body: "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    cursor: none;
+    @apply font-body bg-white text-black overflow-x-hidden;
+  }
+  
+  h1, h2, h3 {
+    @apply font-display tracking-tighter;
+  }
+}
+
+.hero-photo {
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.hero-photo:hover {
+  filter: grayscale(0%);
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide default cursor on interactive elements as well */
+a, button, input, select, textarea {
+  cursor: none !important;
+}
+
+.sidebar-border {
+  border-color: var(--color-border);
+  border-width: 0.5px;
+}
