@@ -78,10 +78,18 @@ const projects: Project[] = [
     tags: ['REACT'],
     img: '/optical thumbnail image.png',
     description: 'Optical studio website built with React for a modern browsing experience.'
+  },
+  {
+    id: '12',
+    title: 'Roofing Co. Redesign',
+    category: 'UX/UI MODERNIZATION',
+    tags: ['REDESIGN', 'UX/UI', 'MODERNIZATION'],
+    img: '/first-redesign-project-thumbnail-image.jpeg',
+    description: 'Complete UX/UI modernization of a German roofing company\'s website — transforming a dated 2000s-era interface into a clean, modern, conversion-focused experience.'
   }
 ];
 
-const filters = ['ALL', 'WEB DEV', 'MOBILE', 'AI / CHATBOT'];
+const filters = ['ALL', 'WEB DEV', 'MOBILE', 'AI / CHATBOT', 'UX/UI MODERNIZATION'];
 
 function Reveal({ children }: { children: React.ReactNode }) {
   return (
@@ -329,6 +337,13 @@ export default function WorksPage() {
                     className="w-full h-auto object-contain"
                   />
                 )}
+                {selectedProject.title === 'Roofing Co. Redesign' && (
+                  <img
+                    src="/first-redesign-project-long-studycase-image.jpg"
+                    alt="Roofing Co. Redesign Project Details"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
               </div>
 
               <div className="p-6 border-t border-white/10">
@@ -341,7 +356,7 @@ export default function WorksPage() {
                   </div>
                   {selectedProject.title !== 'Luma Finance Mobile App' && (
                     <a
-                      href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
+                      href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hidden md:flex items-center gap-2 bg-green text-black px-6 py-3 font-bold text-xs uppercase tracking-wider hover:scale-105 transition-transform interactive"
