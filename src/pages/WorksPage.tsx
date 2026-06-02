@@ -48,6 +48,14 @@ const projects: Project[] = [
     description: 'This landing page presents a modern and futuristic design agency concept focused on building bold brands. The hero section immediately grabs attention with a strong visual, warm orange lighting, and a powerful headline. The layout is clean and structured, with clear call-to-action buttons that guide users smoothly.'
   },
   {
+    id: '05',
+    title: 'Roofing Business Landing Page',
+    category: 'LANDING PAGE',
+    tags: ['Next.js', 'Tailwind', 'Framer Motion'],
+    img: '/roofing business landing page - thumbnail image.png',
+    description: 'Modern, conversion-focused landing page for a roofing business — designed and developed to showcase services, build trust, and drive leads through a clean storytelling layout.'
+  },
+  {
     id: '08',
     title: 'Soda Brand Store',
     category: 'WEB DEV',
@@ -89,7 +97,7 @@ const projects: Project[] = [
   }
 ];
 
-const filters = ['ALL', 'WEB DEV', 'MOBILE', 'AI / CHATBOT', 'UX/UI MODERNIZATION'];
+const filters = ['ALL', 'WEB DEV', 'MOBILE', 'AI / CHATBOT', 'UX/UI MODERNIZATION', 'LANDING PAGE'];
 
 function Reveal({ children }: { children: React.ReactNode }) {
   return (
@@ -323,6 +331,13 @@ export default function WorksPage() {
                     className="w-full h-auto object-contain"
                   />
                 )}
+                {selectedProject.title === 'Roofing Business Landing Page' && (
+                  <img
+                    src="/roofing business landing page - storytelling long image details.jpg"
+                    alt="Roofing Business Landing Page Project Details"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
                 {selectedProject.title === 'Natural Baby' && (
                   <img
                     src="/Natural Baby - long project details image.jpg"
@@ -356,7 +371,7 @@ export default function WorksPage() {
                   </div>
                   {selectedProject.title !== 'Luma Finance Mobile App' && (
                     <a
-                      href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
+                      href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Business Landing Page' ? 'https://roofguard-pro.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hidden md:flex items-center gap-2 bg-green text-black px-6 py-3 font-bold text-xs uppercase tracking-wider hover:scale-105 transition-transform interactive"
