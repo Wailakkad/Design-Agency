@@ -64,6 +64,14 @@ const projects: Project[] = [
     description: 'CozyNest is a high-end luxury resort landing page designed to capture emotion and drive bookings. The project focuses on immersive visuals, refined typography, and a conversion-optimized structure that reflects the calm elegance of a boutique forest retreat.'
   },
   {
+    id: '07',
+    title: 'NATUROMA',
+    category: 'AI BRANDING',
+    tags: ['Branding', 'Packaging', 'AI Photography'],
+    img: '/ai-barnding-naturoma-thumbnail-mage.png',
+    description: 'Natural supplement brand identity rooted in purity, wellness, and modern minimalism. NATUROMA is a natural supplement brand built around the belief that wellness should feel as clean and pure as the ingredients inside the bottle.'
+  },
+  {
     id: '08',
     title: 'Soda Brand Store',
     category: 'WEB DEV',
@@ -105,7 +113,7 @@ const projects: Project[] = [
   }
 ];
 
-const filters = ['ALL', 'WEB DEV', 'MOBILE', 'AI / CHATBOT', 'UX/UI MODERNIZATION', 'LANDING PAGE'];
+const filters = ['ALL', 'WEB DEV', 'MOBILE', 'AI / CHATBOT', 'UX/UI MODERNIZATION', 'LANDING PAGE', 'AI BRANDING'];
 
 function Reveal({ children }: { children: React.ReactNode }) {
   return (
@@ -367,6 +375,13 @@ export default function WorksPage() {
                     className="w-full h-auto object-contain"
                   />
                 )}
+                {selectedProject.title === 'NATUROMA' && (
+                  <img
+                    src="/ai-branding-behince-long-image-presentation.jpg"
+                    alt="NATUROMA Project Details"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
                 {selectedProject.title === 'Roofing Co. Redesign' && (
                   <img
                     src="/first-redesign-project-long-studycase-image.jpg"
@@ -384,7 +399,7 @@ export default function WorksPage() {
                       {selectedProject.description}
                     </p>
                   </div>
-                  {selectedProject.title !== 'Luma Finance Mobile App' && (
+                  {selectedProject.title !== 'Luma Finance Mobile App' && selectedProject.title !== 'NATUROMA' && (
                     <a
                       href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Business Landing Page' ? 'https://roofguard-pro.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : selectedProject.title === 'CozyNest' ? 'https://cozynest-landing.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
                       target="_blank"
