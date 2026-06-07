@@ -110,6 +110,14 @@ const projects: Project[] = [
     tags: ['REDESIGN', 'UX/UI', 'MODERNIZATION'],
     img: '/first-redesign-project-thumbnail-image.jpeg',
     description: 'Complete UX/UI modernization of a German roofing company\'s website — transforming a dated 2000s-era interface into a clean, modern, conversion-focused experience.'
+  },
+  {
+    id: '13',
+    title: 'ShopMind AI',
+    category: 'AI / CHATBOT',
+    tags: ['React', 'Express', 'MongoDB', 'Pinecone', 'NVIDIA NIM'],
+    img: '/shopemind-ai-thumbnail-image.png',
+    description: 'AI-powered RAG e-commerce chatbot demo. Users describe products in natural language; the system embeds queries via NVIDIA NIM, retrieves matches from Pinecone vector DB, and generates tailored responses via LLM. Built with React + Express + MongoDB + Pinecone.'
   }
 ];
 
@@ -389,6 +397,13 @@ export default function WorksPage() {
                     className="w-full h-auto object-contain"
                   />
                 )}
+                {selectedProject.title === 'ShopMind AI' && (
+                  <img
+                    src="/new-shopemind-ai-behance-presentation-image.jpg"
+                    alt="ShopMind AI Project Details"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
               </div>
 
               <div className="p-6 border-t border-white/10">
@@ -399,7 +414,7 @@ export default function WorksPage() {
                       {selectedProject.description}
                     </p>
                   </div>
-                  {selectedProject.title !== 'Luma Finance Mobile App' && selectedProject.title !== 'NATUROMA' && (
+                  {selectedProject.title !== 'Luma Finance Mobile App' && selectedProject.title !== 'NATUROMA' && selectedProject.title !== 'ShopMind AI' && (
                     <a
                       href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Business Landing Page' ? 'https://roofguard-pro.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : selectedProject.title === 'CozyNest' ? 'https://cozynest-landing.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
                       target="_blank"
