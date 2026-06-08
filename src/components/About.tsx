@@ -47,7 +47,7 @@ export default function About() {
         </div>
 
         {/* Right Column */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
@@ -68,7 +68,7 @@ export default function About() {
               </div>
             </motion.div>
           ))}
-          <div className="col-span-2 mt-4 flex justify-between text-[10px] text-gray uppercase font-bold tracking-widest border-t border-white/10 pt-4">
+          <div className="col-span-1 md:col-span-2 mt-4 flex flex-wrap gap-x-4 gap-y-1 justify-start md:justify-between text-[9px] md:text-[10px] text-gray uppercase font-bold tracking-widest border-t border-white/10 pt-4">
             <span>Brand Identity</span>
             <span>Web Development</span>
             <span>AI Integration</span>

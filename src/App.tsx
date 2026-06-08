@@ -33,7 +33,7 @@ function Reveal({ children }: { children: React.ReactNode }) {
 
 function Homepage() {
   return (
-    <div className="relative font-body">
+    <div className="relative font-body overflow-x-hidden">
       <Navbar />
       
       <main>

@@ -36,11 +36,11 @@ export default function Contact() {
           </div>
 
           <div className="space-y-4">
-            <a href="mailto:akkadouail8@gmail.com" className="text-3xl md:text-4xl text-green hover:underline interactive transition-all">
+            <a href="mailto:akkadouail8@gmail.com" className="text-xl sm:text-3xl md:text-4xl text-green hover:underline break-all interactive transition-all">
               akkadouail8@gmail.com
             </a>
             
-            <div className="flex space-x-8 pt-4">
+            <div className="flex flex-wrap gap-4 md:gap-8 pt-4">
               {[
                 { icon: <Instagram className="w-5 h-5" />, label: 'Instagram', handle: '@o_akkad.ai', url: 'https://www.instagram.com/o_akkad.ai/' },
                 { icon: <Linkedin className="w-5 h-5" />, label: 'LinkedIn', handle: 'ouail-akkad', url: 'https://linkedin.com/in/akkad-ouail-91456a301' },

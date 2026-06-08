@@ -42,9 +42,9 @@ export default function Works() {
   ];
 
   return (
-    <section id="works" className="w-full bg-black text-white py-32 px-10 relative overflow-hidden">
+    <section id="works" className="w-full bg-black text-white py-32 px-6 md:px-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
-        <h2 className="text-8xl md:text-[140px] font-black tracking-[-8px]">Works</h2>
+        <h2 className="text-6xl md:text-[140px] font-black tracking-[-4px] md:tracking-[-8px]">Works</h2>
         
         <div className="border-t border-white/5">
           {projects.map((project, idx) => (
@@ -52,7 +52,7 @@ export default function Works() {
               key={project.id}
               onMouseEnter={() => setHoveredProject(idx)}
               onMouseLeave={() => setHoveredProject(null)}
-              className="group relative flex flex-col md:flex-row items-start md:items-center py-10 border-b border-white/5 transition-colors hover:bg-dark/50 px-4 -mx-4 cursor-none"
+              className="group relative flex flex-col md:flex-row items-start md:items-center py-6 md:py-10 border-b border-white/5 transition-colors hover:bg-dark/50 px-4 -mx-4 cursor-none"
             >
               <span className="font-display text-4xl font-black text-gray opacity-20 mr-0 md:mr-16 mb-4 md:mb-0 group-hover:opacity-100 group-hover:text-green transition-all">
                 {project.id}

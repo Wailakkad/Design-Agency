@@ -68,7 +68,7 @@ export default function Hero() {
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-[280px] md:w-[340px] aspect-[3/4.2] bg-green z-10 overflow-hidden shadow-2xl flex items-end justify-center"
+            className="relative w-[240px] sm:w-[280px] md:w-[340px] aspect-[3/4.2] bg-green z-10 overflow-hidden shadow-2xl flex items-end justify-center"
           >
             <div className="absolute inset-0 hero-photo bg-[url('/my-hero-image.png')] bg-cover bg-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
@@ -79,7 +79,7 @@ export default function Hero() {
             initial={{ y: -80, opacity: 0 }}
             animate={{ y: 0, opacity: 0.05 }}
             transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-10 text-[24vw] lg:text-[240px] leading-[0.8] text-black z-0 pointer-events-none whitespace-nowrap font-display tracking-[-10px]"
+            className="absolute bottom-20 md:bottom-10 text-[24vw] lg:text-[240px] leading-[0.8] text-black z-0 pointer-events-none whitespace-nowrap font-display tracking-[-10px]"
           >
             AKKAD
           </motion.h1>
@@ -89,7 +89,7 @@ export default function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="absolute bottom-16 flex flex-col items-center space-y-6 z-30"
+            className="md:absolute bottom-16 flex flex-col items-center space-y-4 md:space-y-6 z-30 mt-auto pb-8 md:pb-0"
           >
             <div className="bg-green text-black px-4 py-1 font-extrabold uppercase text-[11px] tracking-wider">
               AI Developer & Builder

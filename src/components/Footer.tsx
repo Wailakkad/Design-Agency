@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-white px-10 border-t border-green pt-0">
+    <footer className="w-full bg-black text-white px-6 md:px-10 border-t border-green pt-0">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center h-20 border-b border-white/5">
           <div className="font-display font-black text-lg tracking-tight">OUAIL AKKAD</div>
