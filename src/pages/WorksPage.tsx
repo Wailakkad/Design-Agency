@@ -118,6 +118,22 @@ const projects: Project[] = [
     tags: ['React', 'Express', 'MongoDB', 'Pinecone', 'NVIDIA NIM'],
     img: '/shopemind-ai-thumbnail-image.png',
     description: 'AI-powered RAG e-commerce chatbot demo. Users describe products in natural language; the system embeds queries via NVIDIA NIM, retrieves matches from Pinecone vector DB, and generates tailored responses via LLM. Built with React + Express + MongoDB + Pinecone.'
+  },
+  {
+    id: '14',
+    title: 'HMT Oria — Motorcycle Helmet Interactive Showcase',
+    category: 'WEB DEV',
+    tags: ['React', 'TypeScript', 'GSAP', 'Tailwind CSS'],
+    img: '/HMT Oria — Motorcycle Helmet Interactive Showcase thumbnail.jpeg',
+    description: 'An immersive, cinematic single-page product landing page for a premium motorcycle helmet brand. Built with React, TypeScript, GSAP, and Tailwind CSS, it features a hero showroom, interactive tech hotspots, an exploded view with layered animations, a real-time color/visor configurator, and a comparative safety specs table — all designed to deliver a high-end brand experience.'
+  },
+  {
+    id: '15',
+    title: 'ShopWave',
+    category: 'WEB DEV',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Redux Toolkit', 'Framer Motion'],
+    img: '/shopwave-thumbnail.png',
+    description: 'ShopWave fashion e-commerce frontend built with React + Vite + Tailwind CSS v4 + Redux Toolkit + framer-motion. Features: scroll-aware navbar, product grids with filtering/pagination, cart with persist, recommendations carousels, responsive design, and cohesive dark-themed CTA sections across all pages.'
   }
 ];
 
@@ -404,6 +420,20 @@ export default function WorksPage() {
                     className="w-full h-auto object-contain"
                   />
                 )}
+                {selectedProject.title === 'HMT Oria — Motorcycle Helmet Interactive Showcase' && (
+                  <img
+                    src="/HMT Oria — Motorcycle Helmet Interactive Showcase presentation.jpg"
+                    alt="HMT Oria — Motorcycle Helmet Interactive Showcase Project Details"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
+                {selectedProject.title === 'ShopWave' && (
+                  <img
+                    src="/shopwave-behince-presentations.jpg"
+                    alt="ShopWave Project Details"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
               </div>
 
               <div className="p-6 border-t border-white/10">
@@ -414,9 +444,9 @@ export default function WorksPage() {
                       {selectedProject.description}
                     </p>
                   </div>
-                  {selectedProject.title !== 'Luma Finance Mobile App' && selectedProject.title !== 'NATUROMA' && selectedProject.title !== 'ShopMind AI' && (
+                    {selectedProject.title !== 'Luma Finance Mobile App' && selectedProject.title !== 'NATUROMA' && selectedProject.title !== 'ShopMind AI' && (
                     <a
-                      href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Business Landing Page' ? 'https://roofguard-pro.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : selectedProject.title === 'CozyNest' ? 'https://cozynest-landing.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
+                      href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Business Landing Page' ? 'https://roofguard-pro.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : selectedProject.title === 'CozyNest' ? 'https://cozynest-landing.vercel.app/' : selectedProject.title === 'HMT Oria — Motorcycle Helmet Interactive Showcase' ? 'https://hmt-oria-gt.vercel.app/' : selectedProject.title === 'ShopWave' ? 'https://shop-wave-fashion-e-commerce-fronte.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hidden md:flex items-center gap-2 bg-green text-black px-6 py-3 font-bold text-xs uppercase tracking-wider hover:scale-105 transition-transform interactive"
