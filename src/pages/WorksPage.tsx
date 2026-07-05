@@ -134,6 +134,14 @@ const projects: Project[] = [
     tags: ['React', 'Vite', 'Tailwind CSS', 'Redux Toolkit', 'Framer Motion'],
     img: '/shopwave-thumbnail.png',
     description: 'ShopWave fashion e-commerce frontend built with React + Vite + Tailwind CSS v4 + Redux Toolkit + framer-motion. Features: scroll-aware navbar, product grids with filtering/pagination, cart with persist, recommendations carousels, responsive design, and cohesive dark-themed CTA sections across all pages.'
+  },
+  {
+    id: '16',
+    title: 'Nivora',
+    category: 'WEB DEV',
+    tags: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'Framer Motion'],
+    img: '/nivora-thumbnail.jpg',
+    description: 'A premium brand website for a high-end architecture and interior design firm, built with React 19, TypeScript, Vite, Tailwind CSS v4, and Framer Motion. Features include a full-screen parallax hero with split-text/split-character animations, a bento-grid portfolio with full-screen lightbox project briefs, an infinite auto-scrolling team marquee, and multi-page routing (Home, About, Projects, Contact) with smooth AnimatePresence transitions. The design follows a brutalist-luxury aesthetic — black/stone palette, monospace typography, grayscale imagery with hover color reveals, and editorial-level motion design throughout.'
   }
 ];
 
@@ -434,17 +442,24 @@ export default function WorksPage() {
                     className="w-full h-auto object-contain"
                   />
                 )}
+                {selectedProject.title === 'Nivora' && (
+                  <img
+                    src="/Nivora- presentation-image.jpg"
+                    alt="Nivora Project Details"
+                    className="w-full h-auto object-contain"
+                  />
+                )}
               </div>
 
               <div className="p-6 border-t border-white/10">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-black tracking-tight">{selectedProject.title}</h3>
-                    <p className="text-gray text-sm mt-2 max-w-lg">
+                    <p className="text-gray text-sm mt-2 max-w-xl">
                       {selectedProject.description}
                     </p>
                   </div>
-                    {selectedProject.title !== 'Luma Finance Mobile App' && selectedProject.title !== 'NATUROMA' && selectedProject.title !== 'ShopMind AI' && (
+                    {selectedProject.title !== 'Luma Finance Mobile App' && selectedProject.title !== 'NATUROMA' && selectedProject.title !== 'ShopMind AI' && selectedProject.title !== 'Nivora' && (
                     <a
                       href={selectedProject.title === 'Natural Baby' ? 'https://rag-chatbot-pied-seven.vercel.app/' : selectedProject.title === 'OPTIC STUDIO' ? 'https://opticien-website-ai-agent-for-custo.vercel.app/' : selectedProject.title === 'Plumbing Services' ? 'https://plumber-jade.vercel.app/' : selectedProject.title === 'Next-Gen Agency' ? 'https://neuro-nexa.vercel.app/' : selectedProject.title === 'Bold Orange' ? 'https://web-agency-landing-page-flame.vercel.app/' : selectedProject.title === 'Soda Brand Store' ? 'https://xoxo-bice.vercel.app/' : selectedProject.title === 'Roofing Business Landing Page' ? 'https://roofguard-pro.vercel.app/' : selectedProject.title === 'Roofing Co. Redesign' ? 'https://erich-ide-co-dachdeckermeister-gmb.vercel.app/' : selectedProject.title === 'CozyNest' ? 'https://cozynest-landing.vercel.app/' : selectedProject.title === 'HMT Oria — Motorcycle Helmet Interactive Showcase' ? 'https://hmt-oria-gt.vercel.app/' : selectedProject.title === 'ShopWave' ? 'https://shop-wave-fashion-e-commerce-fronte.vercel.app/' : 'https://nextjs-ai-fullstack-store.vercel.app/'}
                       target="_blank"

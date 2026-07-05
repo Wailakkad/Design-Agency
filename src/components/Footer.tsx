@@ -27,16 +27,15 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6">
-            {['Instagram', 'Linkedin', 'Github'].map((social) => (
-              <a key={social} href="#" className="text-[10px] font-bold uppercase tracking-widest text-gray hover:text-white transition-colors interactive">
-                {social}
-              </a>
-            ))}
+            <a href="https://www.instagram.com/o_akkad.ai/" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-gray hover:text-white transition-colors interactive">Instagram</a>
+            <a href="https://linkedin.com/in/akkad-ouail-91456a301" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-gray hover:text-white transition-colors interactive">Linkedin</a>
+            <a href="https://x.com/Ouail_akkad_Ai" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-gray hover:text-white transition-colors interactive">X (Twitter)</a>
+            <a href="https://github.com/Wailakkad" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-gray hover:text-white transition-colors interactive">Github</a>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center h-16 text-[10px] text-gray uppercase tracking-[0.2em] font-bold">
-          <p>© 2025 OUAIL AKKAD — Helping brands grow smarter with AI</p>
+          <p>© 2026 OUAIL AKKAD — Helping brands grow smarter with AI</p>
           <p>@O_AKKAD.AI • MOROCCO</p>
         </div>
       </div>

@@ -6,8 +6,8 @@ export default function About() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   
   const skills = [
-    'React', 'Next.js', 'Node.js', 'Figma', 'Flutter', 'Python', 
-    'n8n', 'Voiceflow', 'Chatbase', 'Framer', 'Webflow', 'Supabase'
+    'React', 'Next.js', 'Node.js', 'Express', 'MySQL', 'MongoDB',
+    'Figma', 'n8n', 'Chatbase', 'Supabase', 'AI Creative'
   ];
 
   const projects = [
